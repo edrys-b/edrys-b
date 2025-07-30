@@ -1,0 +1,22 @@
+# B-AIBUDA GLOBAL NIGERIA LIMITED - Uploads Directory
+
+This directory contains uploaded media files for the website.
+
+Placeholder files:
+- logo.jpg: Company logo
+- ceo.jpg: CEO portrait
+
+For production:
+1. Replace these placeholder files with actual company images
+2. Ensure proper permissions (755 for directory, 644 for files)
+3. Configure your web server to properly serve these files
+
+Security:
+- .htaccess file prevents execution of PHP files
+- Only approved file types are allowed
+- Direct access to .htaccess is blocked
+
+File size limits:
+- Images: Max 10MB
+- Videos: Max 50MB
+- Documents: Max 5MB
