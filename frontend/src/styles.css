@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--brand-green: #0a8a3a;
+	--brand-green-dark: #06692c;
+}
+
+.btn {
+	@apply px-4 py-2 rounded-md text-white bg-[color:var(--brand-green)] hover:bg-[color:var(--brand-green-dark)] transition;
+}
+
+.input {
+	@apply border rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[color:var(--brand-green)];
+}
+
+.card {
+	@apply bg-white shadow-sm rounded-lg border p-4;
+}
+
+body { @apply bg-gray-50 text-gray-900; }
