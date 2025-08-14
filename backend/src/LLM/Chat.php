@@ -58,7 +58,7 @@ class Chat
 
 	private function chat(string $prompt): string
 	{
-		$provider = $_ENV['PROVIDER'] ?? 'azure';
+		$provider = $_ENV['PROVIDER'] ?? 'openai';
 		if ($provider === 'azure') {
 			return $this->chatAzure($prompt);
 		}

@@ -17,7 +17,7 @@ class Embeddings
 
 	public function embed(string $text): string
 	{
-		$provider = $_ENV['PROVIDER'] ?? 'azure';
+		$provider = $_ENV['PROVIDER'] ?? 'openai';
 		if ($provider === 'azure') {
 			return $this->embedAzure($text);
 		}

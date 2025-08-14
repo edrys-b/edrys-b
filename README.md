@@ -6,7 +6,7 @@ A full-stack chatbot assistant for student support services.
 - Backend: PHP (WAMP-compatible)
 - Database: MySQL
 - Auth: Email/password + Azure AD SSO
-- LLM: Azure OpenAI (recommended) or OpenAI
+- LLM: OpenAI (default) or Azure OpenAI
 
 ## Features
 - Admin Panel
@@ -73,7 +73,7 @@ www/
 
 ---
 
-## Azure OpenAI Setup (Recommended)
+## Azure OpenAI Setup (Optional)
 1) Provision Azure OpenAI in Azure Portal
 2) Create deployments:
    - Chat model, e.g. `gpt-4o-mini` or `gpt-4o`
