@@ -1,7 +1,7 @@
 <?php
 // Utility functions for B-AIBUDA GLOBAL NIGERIA LIMITED Website
 
-require_once 'config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
 // Security Functions
 function sanitizeInput($data) {

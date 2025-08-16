@@ -19,13 +19,17 @@ try {
     $stmt = $db->query("SELECT COUNT(*) as unread FROM contact_messages WHERE status = 'unread'");
     $unread_messages = $stmt->fetch()['unread'];
     
-    // Get media items count
-    $stmt = $db->query("SELECT COUNT(*) as total FROM media_items WHERE is_active = 1");
-    $total_media = $stmt->fetch()['total'];
-    
-    // Get recent messages
-    $stmt = $db->query("SELECT * FROM contact_messages ORDER BY created_at DESC LIMIT 5");
-    $recent_messages = $stmt->fetchAll();
+    	// Get media items count
+	$stmt = $db->query("SELECT COUNT(*) as total FROM media_items WHERE is_active = 1");
+	$total_media = $stmt->fetch()['total'];
+	
+	// Get services count
+	$stmt = $db->query("SELECT COUNT(*) as total FROM services WHERE is_active = 1");
+	$total_services = $stmt->fetch()['total'];
+	
+	// Get recent messages
+	$stmt = $db->query("SELECT * FROM contact_messages ORDER BY created_at DESC LIMIT 5");
+	$recent_messages = $stmt->fetchAll();
     
     // Get admin sessions count
     $stmt = $db->query("SELECT COUNT(*) as total FROM admin_sessions WHERE is_active = 1");
@@ -241,8 +245,8 @@ try {
                                 <i class="fas fa-cogs"></i>
                             </div>
                             <div>
-                                <h3 class="mb-0">6</h3>
-                                <p class="text-muted mb-0">Services</p>
+                                								<h3 class="mb-0"><?php echo $total_services; ?></h3>
+								<p class="text-muted mb-0">Services</p>
                             </div>
                         </div>
                     </div>
